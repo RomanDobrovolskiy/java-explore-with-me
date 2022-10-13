@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
-@Transactional(readOnly = true)
 public class CompilationServiceImpl implements CompilationService {
     private final CompilationRepository compilationRepository;
     private final EventService eventService;
@@ -81,6 +80,7 @@ public class CompilationServiceImpl implements CompilationService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<CompilationDto> getAll(boolean pinned, Integer from, Integer size) {
         return compilationRepository.findCompilationByPinnedIs(pinned, new OffsetBasedPageRequest(from, size)).stream()
                 .map(CompilationMapper::toDto)
