@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS events
     initiator_id       BIGINT                                  NOT NULL,
     annotation         VARCHAR(2000),
     description        VARCHAR(2000),
-    title              VARCHAR(255)                            NOT NULL,
+    title              VARCHAR(2000)                            NOT NULL,
     paid               BOOLEAN                                 NOT NULL,
     request_moderation BOOLEAN                                 NOT NULL,
     created            TIMESTAMP WITHOUT TIME ZONE             NOT NULL,

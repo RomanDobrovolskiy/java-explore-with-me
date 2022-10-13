@@ -210,7 +210,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional
     public FullEventDto adminUpdateEvent(Long eventId, AdminUpdateEventDto adminUpdateEventDto) {
         Event eventToUpdate = getEvent(eventId).toBuilder().build();
 
