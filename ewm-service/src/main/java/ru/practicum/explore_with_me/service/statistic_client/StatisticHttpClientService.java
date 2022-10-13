@@ -26,7 +26,6 @@ public class StatisticHttpClientService implements StatisticService {
     private static final String SERVICE_NAME = "Explore-With-Me";
 
     @Override
-    @Transactional
     public void hitEndpoint(String endpoint, String ipAddress) {
         StatisticHitEndpointDto dto = StatisticHitEndpointDto.builder()
                 .app(SERVICE_NAME)
