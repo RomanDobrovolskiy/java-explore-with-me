@@ -17,7 +17,6 @@ import java.util.Map;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-@Transactional(readOnly = true)
 public class StatisticHttpClientService implements StatisticService {
 
     private final StatisticClient client;
