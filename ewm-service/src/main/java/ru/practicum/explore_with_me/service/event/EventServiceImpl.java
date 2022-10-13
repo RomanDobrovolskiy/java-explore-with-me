@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
+@Transactional(readOnly = true)
 public class EventServiceImpl implements EventService {
     private final EventRepository eventRepository;
     private final UserService userService;
@@ -39,7 +40,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public List<ShortEventDto> findPublicEvent(FindPublicEventOptions options, Integer from, Integer size) {
         List<Event> events;
 
@@ -84,7 +84,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public FullEventDto getById(Long eventId) {
         Event event = getEvent(eventId);
         if (event.getState() != EventState.PUBLISHED) {
@@ -94,7 +93,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public List<ShortEventDto> getUserEvents(Long userId, Integer from, Integer size) {
         Pageable page = new OffsetBasedPageRequest(from, size, Sort.by("id"));
         userService.getUser(userId);
@@ -177,7 +175,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public FullEventDto getUserEvent(Long userId, Long eventId) {
         User user = userService.getUser(userId);
         Event event = getEvent(eventId);
@@ -201,7 +198,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public List<FullEventDto> findEvents(FindUserEventOptions options, Integer from, Integer size) {
 
         Pageable page = new OffsetBasedPageRequest(from, size, Sort.by("id"));
@@ -285,7 +281,6 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public Event getEvent(long eventId) {
         return eventRepository.findById(eventId).orElseThrow(() -> new EventNotFoundException(eventId));
     }

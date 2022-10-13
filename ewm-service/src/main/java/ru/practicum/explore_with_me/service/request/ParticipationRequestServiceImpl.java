@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class ParticipationRequestServiceImpl implements ParticipationRequestService {
 
     private final ParticipationRequestRepository requestRepository;
@@ -30,7 +31,6 @@ public class ParticipationRequestServiceImpl implements ParticipationRequestServ
     private final UserService userService;
 
     @Override
-    @Transactional(readOnly = true)
     public List<ParticipationRequestDto> getRequestsForUserEvents(Long userId, Long eventId) {
         Event event = eventService.getEvent(eventId);
         User user = userService.getUser(userId);
@@ -85,7 +85,6 @@ public class ParticipationRequestServiceImpl implements ParticipationRequestServ
     }
 
     @Override
-    @Transactional(readOnly = true)
     public List<ParticipationRequestDto> getUserRequests(Long userId) {
         userService.getUser(userId);
 

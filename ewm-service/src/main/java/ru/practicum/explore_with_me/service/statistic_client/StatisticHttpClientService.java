@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.explore_with_me.model.statistic_client.StatisticHitEndpointDto;
 
 import java.time.LocalDateTime;
@@ -16,6 +17,7 @@ import java.util.Map;
 @Service
 @RequiredArgsConstructor
 @Slf4j
+@Transactional(readOnly = true)
 public class StatisticHttpClientService implements StatisticService {
 
     private final StatisticClient client;
@@ -24,6 +26,7 @@ public class StatisticHttpClientService implements StatisticService {
     private static final String SERVICE_NAME = "Explore-With-Me";
 
     @Override
+    @Transactional
     public void hitEndpoint(String endpoint, String ipAddress) {
         StatisticHitEndpointDto dto = StatisticHitEndpointDto.builder()
                 .app(SERVICE_NAME)
