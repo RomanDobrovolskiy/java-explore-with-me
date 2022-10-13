@@ -88,6 +88,7 @@ public class CompilationServiceImpl implements CompilationService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public CompilationDto getCompilationDto(long compilationId) {
         return CompilationMapper.toDto(getCompilation(compilationId));
     }
