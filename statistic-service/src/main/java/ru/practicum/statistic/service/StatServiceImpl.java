@@ -19,12 +19,10 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
-@Transactional(readOnly = true)
 public class StatServiceImpl implements StatService {
     private final HitRepository repository;
 
     @Override
-    @Transactional
     public EndpointHitDto create(EndpointHitDto dto) {
         EndpointHit hit = EndpointHit.builder()
                 .timestamp(LocalDateTime.now())
