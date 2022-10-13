@@ -1,4 +1,4 @@
-https://github.com/RomanDobrovolskiy/java-explore-with-me/pull/1
+https://github.com/RomanDobrovolskiy/java-explore-with-me/pull/2
 
 #Приложение ExploreWithMe
 
