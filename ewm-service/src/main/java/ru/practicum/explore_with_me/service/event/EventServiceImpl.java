@@ -40,6 +40,7 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
+    @Transactional
     public List<ShortEventDto> findPublicEvent(FindPublicEventOptions options, Integer from, Integer size) {
         List<Event> events;
 
