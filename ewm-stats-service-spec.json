@@ -13,7 +13,7 @@
   "tags": [
     {
       "name": "StatsController",
-      "description": "API для работы со статистикой посещений"
+      "description": "API для работы со статистикой"
     }
   ],
   "paths": {
@@ -22,7 +22,7 @@
         "tags": [
           "StatsController"
         ],
-        "summary": "Сохранение информации о том, что к эндпоинту был запрос",
+        "summary": "Сохранение информации посещении",
         "description": "Сохранение информации о том, что на uri конкретного сервиса был отправлен запрос пользователем. Название сервиса, uri и ip пользователя указаны в теле запроса.",
         "operationId": "hit",
         "requestBody": {
@@ -48,25 +48,27 @@
         "tags": [
           "StatsController"
         ],
-        "summary": "Получение статистики по посещениям. Обратите внимание: значение даты и времени нужно закодировать (например используя java.net.URLEncoder.encode) ",
+        "summary": "Получение статистики по посещениям",
         "operationId": "getStats",
         "parameters": [
           {
             "name": "start",
             "in": "query",
-            "description": "Дата и время начала диапазона за который нужно выгрузить статистику (в формате \"yyyy-MM-dd HH:mm:ss\")",
+            "description": "Таймстемп (количество секунд от эпохи unix) начала диапазона за который нужно выгрузить статистику",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           },
           {
             "name": "end",
             "in": "query",
-            "description": "Дата и время конца диапазона за который нужно выгрузить статистику (в формате \"yyyy-MM-dd HH:mm:ss\")",
+            "description": "Таймстемп (количество секунд от эпохи unix) конца диапазона за который нужно выгрузить статистику",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           },
           {
@@ -133,9 +135,9 @@
             "description": "IP-адрес пользователя, осуществившего запрос"
           },
           "timestamp": {
-            "type": "string",
-            "description": "Дата и время, когда был совершен запрос к эндпоинту (в формате \"yyyy-MM-dd HH:mm:ss\")",
-            "example": "2022-09-06 11:00:23"
+            "type": "integer",
+            "description": "Таймстемп записи",
+            "format": "int64"
           }
         }
       },

@@ -78,6 +78,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -156,7 +168,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategoryDto"
+                "$ref": "#/components/schemas/CategoryDto"
               }
             }
           },
@@ -177,6 +189,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -272,6 +296,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -372,6 +408,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -466,6 +514,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -570,6 +630,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -672,6 +744,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -766,6 +850,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -858,6 +954,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1031,6 +1139,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1144,6 +1264,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1246,6 +1378,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1348,6 +1492,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1422,7 +1578,6 @@
     },
     "/admin/users": {
       "get": {
-        "description": "Возвращает информацию обо всех пользователях (учитываются параметры ограничения выборки), либо о конкретных (учитываются указанные идентификаторы)",
         "operationId": "getUsers",
         "parameters": [
           {
@@ -1478,6 +1633,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1544,7 +1711,7 @@
             "description": "Внутренняя ошибка сервера"
           }
         },
-        "summary": "Получение информации о пользователях",
+        "summary": "Поиск пользователей",
         "tags": [
           "Admin: Пользователи"
         ]
@@ -1555,7 +1722,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUserRequest"
+                "$ref": "#/components/schemas/UserDto"
               }
             }
           },
@@ -1576,6 +1743,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1670,6 +1849,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1786,6 +1977,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -1887,6 +2090,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2012,6 +2227,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2113,6 +2340,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2302,6 +2541,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2404,6 +2655,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2530,6 +2793,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2641,6 +2916,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2752,6 +3039,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2863,6 +3162,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -2973,6 +3284,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3087,6 +3410,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3209,6 +3544,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3330,6 +3677,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3434,6 +3793,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3544,6 +3915,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3655,6 +4038,18 @@
           "400": {
             "content": {
               "application/json": {
+                "example": {
+                  "status": "BAD_REQUEST",
+                  "reason": "Incorrectly made request.",
+                  "message": "During [newEventDto] validation 4 errors were found",
+                  "errors": [
+                    "Field: eventDate. Error: must be a date in the present or in the future. Value: 2022-09-07T09:30",
+                    "Field: title. Error: must not be blank. Value: ",
+                    "Field: annotation. Error: must not be blank. Value: ",
+                    "Field: participantLimit. Error: must be greater than or equal to 0. Value: -5"
+                  ],
+                  "timestamp": "2022-09-07 09:39:38"
+                },
                 "schema": {
                   "$ref": "#/components/schemas/ApiError"
                 }
@@ -3888,7 +4283,6 @@
       },
       "CategoryDto": {
         "required": [
-          "id",
           "name"
         ],
         "type": "object",
@@ -3897,6 +4291,7 @@
             "type": "integer",
             "description": "Идентификатор категории",
             "format": "int64",
+            "readOnly": true,
             "example": 1
           },
           "name": {
@@ -3909,8 +4304,6 @@
       },
       "CompilationDto": {
         "required": [
-          "id",
-          "pinned",
           "title"
         ],
         "type": "object",
@@ -3982,10 +4375,8 @@
         "required": [
           "annotation",
           "category",
-          "eventDate",
           "initiator",
           "location",
-          "paid",
           "title"
         ],
         "type": "object",
@@ -4081,9 +4472,7 @@
         "required": [
           "annotation",
           "category",
-          "eventDate",
           "initiator",
-          "paid",
           "title"
         ],
         "type": "object",
@@ -4189,20 +4578,6 @@
         },
         "description": "Широта и долгота места проведения события"
       },
-      "NewCategoryDto": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Название категории",
-            "example": "Концерты"
-          }
-        },
-        "description": "Данные для добавления новой категории"
-      },
       "NewCompilationDto": {
         "required": [
           "title"
@@ -4306,26 +4681,6 @@
         },
         "description": "Новое событие"
       },
-      "NewUserRequest": {
-        "required": [
-          "email",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "description": "Почтовый адрес",
-            "example": "ivan.petrov@practicummail.ru"
-          },
-          "name": {
-            "type": "string",
-            "description": "Имя",
-            "example": "Иван Петров"
-          }
-        },
-        "description": "Данные нового пользователя"
-      },
       "ParticipationRequestDto": {
         "type": "object",
         "properties": {
@@ -4361,9 +4716,6 @@
         "description": "Заявка на участие в событии"
       },
       "UpdateEventRequest": {
-        "required": [
-          "eventId"
-        ],
         "type": "object",
         "properties": {
           "annotation": {
@@ -4434,7 +4786,6 @@
             "type": "integer",
             "description": "Идентификатор",
             "format": "int64",
-            "readOnly": true,
             "example": 1
           },
           "name": {
@@ -4446,10 +4797,6 @@
         "description": "Пользователь"
       },
       "UserShortDto": {
-        "required": [
-          "id",
-          "name"
-        ],
         "type": "object",
         "properties": {
           "id": {
