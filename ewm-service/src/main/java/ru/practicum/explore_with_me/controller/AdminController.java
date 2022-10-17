@@ -108,10 +108,8 @@ public class AdminController {
     public List<FullEventDto> findEvents(@RequestParam(value = "users") Set<Long> userIds,
                                          @RequestParam(value = "states") Set<EventState> states,
                                          @RequestParam(value = "categories") Set<Long> categoryIds,
-                                         @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-                                         @RequestParam(value = "rangeStart") LocalDateTime start,
-                                         @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-                                         @RequestParam(value = "rangeEnd") LocalDateTime end,
+                                         @RequestParam(value = "rangeStart") String start,
+                                         @RequestParam(value = "rangeEnd") String end,
                                          @RequestParam(value = "from", defaultValue = "0") Integer from,
                                          @RequestParam(value = "size", defaultValue = "10") Integer size) {
         FindUserEventOptions options = new FindUserEventOptions(userIds, states, categoryIds, start, end);
