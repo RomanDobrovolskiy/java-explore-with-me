@@ -40,6 +40,7 @@ public interface EventRepository extends JpaRepository<Event, Long> {
     List<Event> findBetweenDatesByUsersStatesCategories(Collection<Long> userIds, Collection<EventState> states,
                                                         Collection<Long> categoryIds, LocalDateTime start,
                                                         LocalDateTime end, Pageable pageable);
+
     @Query("SELECT e FROM Event as e " +
             "WHERE function('distance',:latitude,:longitude,e.latitude,e.longitude) <= :radius " +
             "ORDER BY function('distance',:latitude,:longitude,e.latitude,e.longitude)")
