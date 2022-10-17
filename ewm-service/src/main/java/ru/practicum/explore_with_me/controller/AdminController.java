@@ -1,7 +1,6 @@
 package ru.practicum.explore_with_me.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.explore_with_me.model.category.CategoryDto;
@@ -20,7 +19,6 @@ import ru.practicum.explore_with_me.service.user.UserService;
 import ru.practicum.explore_with_me.validation.Validation;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
