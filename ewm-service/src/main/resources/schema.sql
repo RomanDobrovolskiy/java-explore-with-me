@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS events
     initiator_id       BIGINT                                  NOT NULL,
     annotation         VARCHAR(2000),
     description        VARCHAR(2000),
-    title              VARCHAR(2000)                            NOT NULL,
+    title              VARCHAR(2000)                           NOT NULL,
     paid               BOOLEAN                                 NOT NULL,
     request_moderation BOOLEAN                                 NOT NULL,
     created            TIMESTAMP WITHOUT TIME ZONE             NOT NULL,
@@ -86,10 +86,10 @@ CREATE OR REPLACE FUNCTION distance(lat1 float, lon1 float, lat2 float, lon2 flo
 AS
 '
     declare
-        dist float = 0;
-        rad_lat1 float;
-        rad_lat2 float;
-        theta float;
+        dist      float = 0;
+        rad_lat1  float;
+        rad_lat2  float;
+        theta     float;
         rad_theta float;
     BEGIN
         IF lat1 = lat2 AND lon1 = lon2
@@ -108,7 +108,8 @@ AS
             dist = sin(rad_lat1) * sin(rad_lat2) + cos(rad_lat1) * cos(rad_lat2) * cos(rad_theta);
 
             IF dist > 1
-            THEN dist = 1;
+            THEN
+                dist = 1;
             END IF;
 
             dist = acos(dist);

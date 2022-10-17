@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.request;
+package ru.practicum.explore_with_me.controller.service.request;
 
 import ru.practicum.explore_with_me.model.request.ParticipationRequestDto;
 

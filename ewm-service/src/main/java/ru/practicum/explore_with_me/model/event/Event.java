@@ -2,6 +2,7 @@ package ru.practicum.explore_with_me.model.event;
 
 import lombok.*;
 import ru.practicum.explore_with_me.model.category.Category;
+import ru.practicum.explore_with_me.model.location.Location;
 import ru.practicum.explore_with_me.model.request.ParticipationRequest;
 import ru.practicum.explore_with_me.model.user.User;
 
@@ -38,6 +39,9 @@ public class Event {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private Location location;
     private Integer participantLimit;
     private boolean requestModeration;
     private Float latitude;

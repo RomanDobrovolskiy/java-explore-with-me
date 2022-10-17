@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.category;
+package ru.practicum.explore_with_me.controller.service.category;
 
 import ru.practicum.explore_with_me.model.category.Category;
 import ru.practicum.explore_with_me.model.category.CategoryDto;

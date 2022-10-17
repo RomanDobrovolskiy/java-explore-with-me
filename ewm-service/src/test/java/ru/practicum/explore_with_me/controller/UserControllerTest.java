@@ -10,8 +10,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.practicum.explore_with_me.model.event.CreateEventDto;
-import ru.practicum.explore_with_me.service.event.EventService;
-import ru.practicum.explore_with_me.service.request.ParticipationRequestService;
+import ru.practicum.explore_with_me.controller.service.event.EventService;
+import ru.practicum.explore_with_me.controller.service.request.ParticipationRequestService;
 
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;

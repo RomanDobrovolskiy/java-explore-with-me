@@ -31,7 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
-/ewm-service/src/main/java/ru/practicum/explore_with_me/location/
 /gen/
-/ewm-service/src/test/java/ru/practicum/explore_with_me/location/repository/
 /ewm-service/src/main/java/ru/practicum/explore_with_me/utils/ErrorStatus.java
+/ewm-service/src/test/java/ru/practicum/explore_with_me/repository/LocationRepositoryTest.java
+/ewm-service/src/main/java/ru/practicum/explore_with_me/model/location/GeoPoint.java

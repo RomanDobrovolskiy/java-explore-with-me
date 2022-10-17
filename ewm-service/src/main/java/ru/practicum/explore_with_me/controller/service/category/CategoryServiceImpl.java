@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.category;
+package ru.practicum.explore_with_me.controller.service.category;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
