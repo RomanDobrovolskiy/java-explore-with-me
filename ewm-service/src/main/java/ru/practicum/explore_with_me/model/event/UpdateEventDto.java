@@ -29,4 +29,5 @@ public class UpdateEventDto {
     @Builder.Default
     private Integer participantLimit = 0;
     private String title;
+    private Long locationId;
 }

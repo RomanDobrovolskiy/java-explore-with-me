@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.statistic_client;
+package ru.practicum.explore_with_me.controller.service.statistic_client;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

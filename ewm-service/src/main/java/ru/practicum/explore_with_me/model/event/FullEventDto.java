@@ -2,6 +2,7 @@ package ru.practicum.explore_with_me.model.event;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
+import ru.practicum.explore_with_me.model.location.LocationDto;
 import ru.practicum.explore_with_me.validation.Validation;
 
 import javax.validation.constraints.NotNull;
@@ -28,6 +29,7 @@ public class FullEventDto {
     private EventState state;
     private String title;
     private Location location;
+    private LocationDto assignedLocation;
     @Setter
     private Long views;
 

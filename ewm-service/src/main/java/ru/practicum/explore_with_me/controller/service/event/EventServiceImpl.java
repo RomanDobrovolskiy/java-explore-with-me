@@ -1,20 +1,22 @@
-package ru.practicum.explore_with_me.service.event;
+package ru.practicum.explore_with_me.controller.service.event;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.practicum.explore_with_me.controller.service.category.CategoryService;
+import ru.practicum.explore_with_me.controller.service.location.LocationService;
+import ru.practicum.explore_with_me.controller.service.statistic_client.StatisticService;
+import ru.practicum.explore_with_me.controller.service.user.UserService;
 import ru.practicum.explore_with_me.exception.EventBadRequestException;
 import ru.practicum.explore_with_me.exception.EventDateTooEarlyException;
 import ru.practicum.explore_with_me.exception.EventNotFoundException;
 import ru.practicum.explore_with_me.model.category.Category;
 import ru.practicum.explore_with_me.model.event.*;
+import ru.practicum.explore_with_me.model.location.Location;
 import ru.practicum.explore_with_me.model.user.User;
 import ru.practicum.explore_with_me.repository.EventRepository;
-import ru.practicum.explore_with_me.service.category.CategoryService;
-import ru.practicum.explore_with_me.service.statistic_client.StatisticService;
-import ru.practicum.explore_with_me.service.user.UserService;
 import ru.practicum.explore_with_me.utils.OffsetBasedPageRequest;
 
 import javax.annotation.PostConstruct;
@@ -33,6 +35,8 @@ public class EventServiceImpl implements EventService {
     private final UserService userService;
     private final CategoryService categoryService;
     private final StatisticService statisticService;
+
+    private final LocationService locationService;
 
     @PostConstruct
     private void setStatisticServiceToEventMapper() {
@@ -120,6 +124,13 @@ public class EventServiceImpl implements EventService {
         event.setState(EventState.PENDING);
         event.setCategory(category);
 
+        if (createEventDto.getLocationId() != null) {
+            Location location = locationService.getLocation(createEventDto.getLocationId());
+            if (EventValidator.isEventInLocation(event, location)) {
+                event.setLocation(location);
+            }
+        }
+
         return EventMapper.toFullDto(eventRepository.save(event));
     }
 
@@ -169,6 +180,13 @@ public class EventServiceImpl implements EventService {
 
         if (updateEventDto.getTitle() != null && !updateEventDto.getTitle().isBlank()) {
             eventToUpdate.setTitle(updateEventDto.getTitle());
+        }
+
+        if (updateEventDto.getLocationId() != null) {
+            Location location = locationService.getLocation(updateEventDto.getLocationId());
+            if (EventValidator.isEventInLocation(eventToUpdate, location)) {
+                eventToUpdate.setLocation(location);
+            }
         }
 
         return EventMapper.toFullDto(eventRepository.save(eventToUpdate));
@@ -283,5 +301,28 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event getEvent(long eventId) {
         return eventRepository.findById(eventId).orElseThrow(() -> new EventNotFoundException(eventId));
+    }
+
+    @Override
+    public List<FullEventDto> getEventsInLocation(Long locationId, Integer from, Integer size) {
+        Location location = locationService.getLocation(locationId);
+        Pageable page = new OffsetBasedPageRequest(from, size);
+        return eventRepository.getEventsNearPoint(location.getLatitude(), location.getLongitude(),
+                        location.getRadius(), page)
+                .stream()
+                .map(EventMapper::toFullDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ShortEventDto> getPublishedEventsInLocation(Long locationId, Integer from, Integer size) {
+        Location location = locationService.getLocation(locationId);
+        Pageable page = new OffsetBasedPageRequest(from, size);
+        return eventRepository.getPublicEventsNearPoint(location.getLatitude(), location.getLongitude(),
+                        location.getRadius(), page)
+                .stream()
+                .filter(e -> e.getState() == EventState.PUBLISHED)
+                .map(EventMapper::toShortDto)
+                .collect(Collectors.toList());
     }
 }

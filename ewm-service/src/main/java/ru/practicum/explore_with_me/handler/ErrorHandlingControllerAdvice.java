@@ -65,7 +65,7 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
     }
 
     @ExceptionHandler({UserNotFoundException.class, CategoryNotFoundException.class, EventNotFoundException.class,
-            RequestNotFoundException.class, CompilationNotFoundException.class})
+            RequestNotFoundException.class, CompilationNotFoundException.class, LocationNotFoundException.class})
     public ResponseEntity<Object> handleNotFoundException(RuntimeException e) {
         ApiError apiError = new ApiError(HttpStatus.NOT_FOUND);
         apiError.setReason("The required object was not found.");
@@ -73,7 +73,7 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
         return createResponse(apiError);
     }
 
-    @ExceptionHandler({EventDateTooEarlyException.class, EventBadRequestException.class})
+    @ExceptionHandler({EventDateTooEarlyException.class, EventBadRequestException.class, LocationBadRequest.class})
     public ResponseEntity<Object> handleEventExceptions(RuntimeException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }

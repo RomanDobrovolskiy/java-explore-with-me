@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.user;
+package ru.practicum.explore_with_me.controller.service.user;
 
 import ru.practicum.explore_with_me.model.user.ReturnUserDto;
 import ru.practicum.explore_with_me.model.user.User;

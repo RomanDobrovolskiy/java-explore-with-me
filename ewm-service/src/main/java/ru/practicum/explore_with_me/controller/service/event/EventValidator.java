@@ -1,9 +1,11 @@
-package ru.practicum.explore_with_me.service.event;
+package ru.practicum.explore_with_me.controller.service.event;
 
 import ru.practicum.explore_with_me.exception.EventBadRequestException;
 import ru.practicum.explore_with_me.exception.EventNotFoundException;
 import ru.practicum.explore_with_me.model.event.Event;
 import ru.practicum.explore_with_me.model.event.EventState;
+import ru.practicum.explore_with_me.model.location.Location;
+import ru.practicum.explore_with_me.utils.Coordinate;
 
 import java.time.LocalDateTime;
 
@@ -41,6 +43,14 @@ class EventValidator {
         }
         if (event.getState() == EventState.PUBLISHED) {
             throw new EventBadRequestException("Event already published");
+        }
+        return true;
+    }
+
+    static boolean isEventInLocation(Event event, Location location) {
+        if (Coordinate.distance(location.getLongitude(), location.getLatitude(),
+                event.getLongitude(), event.getLatitude()) > location.getRadius()) {
+            throw new EventBadRequestException("Event not in this location");
         }
         return true;
     }

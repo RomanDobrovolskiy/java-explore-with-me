@@ -1,7 +1,8 @@
 package ru.practicum.explore_with_me.model.event;
 
+import ru.practicum.explore_with_me.model.location.LocationMapper;
 import ru.practicum.explore_with_me.model.request.ParticipationRequestStatus;
-import ru.practicum.explore_with_me.service.statistic_client.StatisticService;
+import ru.practicum.explore_with_me.controller.service.statistic_client.StatisticService;
 
 public class EventMapper {
     private static StatisticService statisticService;
@@ -33,6 +34,7 @@ public class EventMapper {
                 .confirmedRequests(event.getParticipationRequests().stream()
                         .filter(r -> r.getStatus() == ParticipationRequestStatus.CONFIRMED).count())
                 .location(new FullEventDto.Location(event.getLatitude(), event.getLongitude()))
+                .assignedLocation(LocationMapper.toDto(event.getLocation()))
                 .views(statisticService != null ?
                         statisticService.getStatistic("/events/" + event.getId()) : null)
                 .build();

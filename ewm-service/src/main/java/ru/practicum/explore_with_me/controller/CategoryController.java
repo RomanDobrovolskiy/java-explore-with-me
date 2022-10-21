@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.explore_with_me.model.category.CategoryDto;
-import ru.practicum.explore_with_me.service.category.CategoryService;
+import ru.practicum.explore_with_me.controller.service.category.CategoryService;
 
 import java.util.List;
 

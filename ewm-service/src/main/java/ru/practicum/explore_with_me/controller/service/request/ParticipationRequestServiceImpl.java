@@ -1,8 +1,10 @@
-package ru.practicum.explore_with_me.service.request;
+package ru.practicum.explore_with_me.controller.service.request;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.practicum.explore_with_me.controller.service.event.EventService;
+import ru.practicum.explore_with_me.controller.service.user.UserService;
 import ru.practicum.explore_with_me.exception.EventBadRequestException;
 import ru.practicum.explore_with_me.exception.EventNotFoundException;
 import ru.practicum.explore_with_me.exception.RequestNotFoundException;
@@ -14,8 +16,6 @@ import ru.practicum.explore_with_me.model.request.ParticipationRequestStatus;
 import ru.practicum.explore_with_me.model.request.RequestMapper;
 import ru.practicum.explore_with_me.model.user.User;
 import ru.practicum.explore_with_me.repository.ParticipationRequestRepository;
-import ru.practicum.explore_with_me.service.event.EventService;
-import ru.practicum.explore_with_me.service.user.UserService;
 
 import java.time.LocalDateTime;
 import java.util.List;

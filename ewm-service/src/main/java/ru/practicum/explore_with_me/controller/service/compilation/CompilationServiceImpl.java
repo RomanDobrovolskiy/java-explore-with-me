@@ -1,8 +1,9 @@
-package ru.practicum.explore_with_me.service.compilation;
+package ru.practicum.explore_with_me.controller.service.compilation;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.practicum.explore_with_me.controller.service.event.EventService;
 import ru.practicum.explore_with_me.exception.CompilationNotFoundException;
 import ru.practicum.explore_with_me.model.compilation.Compilation;
 import ru.practicum.explore_with_me.model.compilation.CompilationDto;
@@ -10,7 +11,6 @@ import ru.practicum.explore_with_me.model.compilation.CompilationMapper;
 import ru.practicum.explore_with_me.model.compilation.ReturnCompilationDto;
 import ru.practicum.explore_with_me.model.event.Event;
 import ru.practicum.explore_with_me.repository.CompilationRepository;
-import ru.practicum.explore_with_me.service.event.EventService;
 import ru.practicum.explore_with_me.utils.OffsetBasedPageRequest;
 
 import java.util.List;

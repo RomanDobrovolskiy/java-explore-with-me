@@ -8,8 +8,8 @@ import ru.practicum.explore_with_me.model.event.FullEventDto;
 import ru.practicum.explore_with_me.model.event.ShortEventDto;
 import ru.practicum.explore_with_me.model.event.UpdateEventDto;
 import ru.practicum.explore_with_me.model.request.ParticipationRequestDto;
-import ru.practicum.explore_with_me.service.event.EventService;
-import ru.practicum.explore_with_me.service.request.ParticipationRequestService;
+import ru.practicum.explore_with_me.controller.service.event.EventService;
+import ru.practicum.explore_with_me.controller.service.request.ParticipationRequestService;
 import ru.practicum.explore_with_me.validation.Validation;
 
 import javax.validation.Valid;

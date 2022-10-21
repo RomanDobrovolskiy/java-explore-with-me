@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.event;
+package ru.practicum.explore_with_me.controller.service.event;
 
 import ru.practicum.explore_with_me.model.event.*;
 
@@ -28,4 +28,8 @@ public interface EventService {
     FullEventDto publishEvent(Long eventId);
 
     FullEventDto rejectEvent(Long eventId);
+
+    List<ShortEventDto> getPublishedEventsInLocation(Long locationId, Integer from, Integer size);
+
+    List<FullEventDto> getEventsInLocation(Long locationId, Integer from, Integer size);
 }
